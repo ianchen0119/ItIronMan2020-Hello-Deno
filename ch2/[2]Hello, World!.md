@@ -82,13 +82,15 @@
 
 ![2-2](./2-2.png)
 
->  休但幾勒，就在這時，筆者竟然遇到麻煩了！！！![2-3](./2-3.png)
+>  休但幾勒，就在這時，筆者竟然遇到麻煩了！！！
 >
-> 系統竟然找不到deno這道指令，怎麼辦呢？
+>  ![2-3](./2-3.png)
 >
-> 放心，這只是因為我們沒有設定環境變數所造成的，我們只要參考[這篇文章](https://tute.io/install-deno-macos)設定之後，便能順利執行囉～！
+>  系統竟然找不到deno這道指令，怎麼辦呢？
 >
-> 貼心提醒：做完`Manually add the directory to your $HOME/.zshrc or $HOME/.bash_profile`這個步驟時，請記得下`source ~/.bash_profile`這道指令，不然Deno仍然不會理你。
+>  放心，這只是因為我們沒有設定環境變數所造成的，我們只要參考[這篇文章](https://tute.io/install-deno-macos)設定之後，便能順利執行囉～！
+>
+>  貼心提醒：做完`Manually add the directory to your $HOME/.zshrc or $HOME/.bash_profile`這個步驟時，請記得下`source ~/.bash_profile`這道指令，不然Deno仍然不會理你。
 
 ![2-4](./2-4.png)
 
