@@ -8,7 +8,7 @@
 
 ## 進入正題
 
-> 第一次聽到Deno是因為某一天我在YouTube上看到JSConf的議程紀錄-[10 Things I Regret About Node.js](https://www.youtube.com/watch?v=M3BM9TB-8yA&vl=en)
+> 第一次聽到Deno是因為某一天我在YouTube上看到JSConf的議程紀錄 -- [10 Things I Regret About Node.js](https://www.youtube.com/watch?v=M3BM9TB-8yA&vl=en)
 
 當中提到了很多Node.Js的缺陷，其中像是：
 
@@ -84,8 +84,12 @@ Node.Js的生態圈中也很努力的想要把這些問題給解決掉~~（遠�
 - Deno所使用的模組系統為`ES Module`。
 
   > 在這邊幫Node.Js澄清一下：
+  >
+  > Node.Js並不是完全遵守CommonJS的規範，它是參考了CommonJS的規範，請知悉。
+  >
+  > Node.Js也逐漸加強了對於ES Module的支援，請參考[Node.js v14.5.0 Documentation](https://nodejs.org/api/esm.html#esm_dual_commonjs_es_module_packages)。
 
-- 我們在Deno上執行`JS`or`TS`程式時，若有需要用到網路、檔案讀取，都需要在CLI中下額外指令以確保安全性。
+- 我們在Deno上執行`JS`or`TS`程式碼時，若有需要用到網路、檔案讀取，都需要在CLI中下額外指令以確保安全性。
 
 - Deno並沒有額外的套件管理系統，若需要導入其他模組，只需要將該模組的Url引入就好。
 
