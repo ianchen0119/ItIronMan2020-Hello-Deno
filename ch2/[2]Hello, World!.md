@@ -1,6 +1,6 @@
 ![Node.js之父新專案Deno 1.0正式亮相| iThome](https://s4.itho.me/sites/default/files/styles/picture_size_large/public/field/image/v1_wide.jpg?itok=aqrO_0jM)
 
-# 強型闖入DenoLand[2] - Hello, World!
+# 強型闖入DenoLand[2] - Hello, World!
 
 > 今天進入到了一個相當重要的篇章，筆者認為這是學習一樣新的程式語言時最愉快的環節沒有之一。
 >
