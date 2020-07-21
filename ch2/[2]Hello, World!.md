@@ -140,3 +140,35 @@
 
 ## Hello, World!的由來
 
+花了這麼多時間進行`Hello, World!`儀式，那就順便介紹一下它的歷史吧！
+
+> 於1972年，[貝爾實驗室](https://zh.wikipedia.org/wiki/貝爾實驗室)成員[布萊恩·柯林漢](https://zh.wikipedia.org/wiki/布萊恩·柯林漢)撰寫的內部技術檔案《A Tutorial Introduction to the Language B》首次提到了Hello World這字串。當時，他使用[B語言](https://zh.wikipedia.org/wiki/B語言)撰寫了第一個使用參數的Hello World相關程式：
+>
+> ```
+> main(){
+>   extrn a,b,c;
+>   putchar(a); putchar(b); putchar(c); putchar('!*n');
+>   }
+> 
+> a 'hell';
+> b 'o, w';
+> c 'orld';
+> ```
+>
+> -- [WiKi](https://zh.wikipedia.org/wiki/Hello_World)
+
+兩年後，世人所熟知的C語言也誕生了，作者[布萊恩·柯林漢](https://zh.wikipedia.org/wiki/布萊恩·柯林漢)也讓C語言能以更簡單的方式讓大家展示出`Hello, World!`:
+
+```
+#include <stdio.h>
+main( )
+{
+	printf("hello, world\n");
+}
+```
+
+> 需要注意的是，Hello World的初始寫法為「hello, world」，並沒有任何感嘆號，全部都是小寫，內含逗號，後面亦有空格，而和現在流行的寫法並不一致。
+>
+> -- [WiKi](https://zh.wikipedia.org/wiki/Hello_World)
+
+從此之後，`Hello, World!`成為每本程式語言必定出現的章節之一，本系列文更是無聊到將這個部分獨立成一篇章節來介紹ＸＤＤＤ
