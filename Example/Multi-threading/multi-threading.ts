@@ -1,8 +1,7 @@
-const { Worker } = require('worker_threads');
 let finaltime = 0;
 async function run(){
 	for (var i = 1; i<=35; i++) {
-	const worker = new Worker('./process.js');
+	const worker = new Worker(new URL("process.js", import.meta.url).href, { type: "module" });
 	worker.postMessage(i); 
 }
 }

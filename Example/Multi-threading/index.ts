@@ -12,4 +12,4 @@ function MatrixC(i :number,j :number){
 	}
 	return result
 }
-export { MatrixC }
+export { a,b,MatrixC }
