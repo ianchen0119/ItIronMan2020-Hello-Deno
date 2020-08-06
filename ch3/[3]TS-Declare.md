@@ -12,6 +12,10 @@ TypeScript相比JavaScript，多出了型別系統、型別預判、對物件導
 
 - 知識點：應用程序接面 (API, Application Programing Interface)
 
+  > 太神奇了傑克，不用寫程式就能使用這個功能。
+  >
+  > -- CC.T
+
 ## 從JS搬遷到TS
 
 > 本小節將探討如何將現有的JavaScript程式檔搬遷到TypeScript上。
@@ -34,9 +38,66 @@ TypeScript相比JavaScript，多出了型別系統、型別預判、對物件導
 
 ### const
 
-### let
+Const通常用於宣告永恆不變的數值（識別值），什麼意思呢？像是`PI=3.14...`就是確定不會改變的數字。
+
+>  如果哪天被數學家推翻的話，那就另當別論了。
+
+```javascript
+const pi = 3.14159;
+```
+
+那我們試試看更改`PI`變數的數值吧！
+
+```javascript
+const pi = 3.14159;
+pi = 50;
+```
+
+果不其然，執行的結果還是報錯了。
+
+> 沒事還是不要挑戰程式語言的規則，就像是：開車不喝酒，喝酒不開車一樣。
+
+![螢幕快照 2020-08-06 下午13.49.37 下午](/Users/ianchen/Desktop/ItIronMan2020-Hello-Deno/ch3/螢幕快照 2020-08-06 下午13.49.37 下午.png)
+
+介紹完`const`後，我們就來看看`let`以及`var`的差異吧！
+
+> 三種宣告方式之中，只有`const`有不可改變的特性唷！
 
 ### var
+
+> 宣告一個變數, 同時可以非強制性地賦予一初始值。
+>
+> -- [MDN web docs](https://developer.mozilla.org/zh-TW/docs/Web/JavaScript/Reference/Statements/var)
+
+相較`const`，利用`var`所聲明的函數可以重複的進行賦值。
+
+```javascript
+var x = 'hello';
+x = 'hi';
+```
+
+### let
+
+> **`let`**用於宣告一個「只作用在當前區塊的變數」，初始值可選擇性的設定。
+>
+> -- [MDN web docs](https://developer.mozilla.org/zh-TW/docs/Web/JavaScript/Reference/Statements/let)
+
+```javascript
+let y = "123";
+y = "456";
+```
+
+當然，`let`同樣也可以讓我們對其宣告的變數重新賦值。
+
+## 修但幾勒，他們兩個差在哪？：範圍鍊
+
+> `var`可以重新賦值，`let`也可以重新賦值，那他們到底差在哪？
+
+別急，接下來就來跟各位讀者談談在JS中一個十分重要的概念，也就是範圍鍊。
+
+> 範圍鍊是什麼呢？為何聽起來這麼專業？
+
+
 
 ## 學會宣告之後：華麗變身強型別
 
@@ -45,6 +106,12 @@ TypeScript相比JavaScript，多出了型別系統、型別預判、對物件導
 ## 工程師都必須知道的事：暫時性死區
 
 > 在暸解變數是如何宣告之後以及其作用域之後，我們一起來看看`暫時性死區`這個聽起來十分牛逼的技術名詞吧！
+
+## 總結
+
+哇！經過一天，各位讀者一共學到了`暫時性死區`、`範圍鍊`、`型別概念`，是不是覺得自己變的更加專業了呢？
+
+> 請不要告訴我沒有，謝謝。
 
 ## 延伸閱讀
 

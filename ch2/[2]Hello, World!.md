@@ -159,7 +159,7 @@
 
 兩年後，世人所熟知的C語言也誕生了，作者[布萊恩·柯林漢](https://zh.wikipedia.org/wiki/布萊恩·柯林漢)也讓C語言能以更簡單的方式讓大家展示出`Hello, World!`:
 
-```
+```c
 #include <stdio.h>
 main( )
 {
@@ -171,4 +171,4 @@ main( )
 >
 > -- [WiKi](https://zh.wikipedia.org/wiki/Hello_World)
 
-從此之後，`Hello, World!`成為每本程式語言必定出現的章節之一，本系列文更是無聊到將這個部分獨立成一篇章節來介紹ＸＤＤＤ
+從此之後，`Hello, World!`成為每本程式語言必定出現的章節之一，本系列文更是無聊到將這個部分獨立成一篇章節來介紹XDD
