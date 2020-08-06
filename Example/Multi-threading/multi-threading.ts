@@ -1,3 +1,4 @@
+//待處理，Worker不支援本地檔案讀取
 let finaltime = 0;
 async function run(){
 	for (var i = 1; i<=35; i++) {
