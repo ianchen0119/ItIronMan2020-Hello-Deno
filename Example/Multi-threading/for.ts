@@ -1,4 +1,4 @@
-import {MatrixC} from './index.ts';
+import { MatrixC } from './index.ts';
 let count = 0;
 let start = new Date();
 for (var i = 1; i<=35; i++) {
