@@ -13,25 +13,29 @@
 
 [Deno入門與實踐](https://zhuanlan.zhihu.com/p/141832695)
 
+[Deno: Create a rest api using JWT](https://levelup.gitconnected.com/deno-create-a-rest-api-using-jwt-5141fd5b1066)
+
 ## Menu
 - Preface
 - What's the difference between Deno and Node.js
 - Build your development environment for deno
+- Hello world on deno
+- Build a simple http server
 - TypeScript 
-    - Using TypeScript from JavaScript 
+    - Moving to TypeScript from JavaScript 
     - Variable
     - Function
     - Union Types
-    - Interface 
-- Hello world on deno
-- Build a simple http server
-- Multi-Programming
-    - Concept of multi-program
-    - Use Worker to build your multi-programming APP 
-[Worker](https://www.axihe.com/edu/deno/workers.html)
+    - Interface
+    - OOP
 - CRUD
-    - Intro for Rest API
+    - Intro for Web API
     - MongoDB
     - Connect to MongoDB
     - Planning on RestAPI
     - Impl of RestAPI
+- Multi-Programming
+    - Concept of multi-program
+    - Use Worker to build your multi-programming APP 
+    > `Worker` haven't support allocate task to local code, I will find any solutions that can solved this problem.
+[Worker](https://www.axihe.com/edu/deno/workers.html)
