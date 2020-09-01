@@ -9,11 +9,11 @@
 // y = "456";
 
 //Scope Chain
-// let x = 'a';
-// function toy(){
-//   let x = 'c';
-// }
-// function print(){
-//   console.log(x)
-// }
-// print() //'a'or'b'?
+let x = 'a';
+function toy(){
+  let x = 'c';
+}
+function print(){
+  console.log(x)
+}
+print() //'a'or'b'?
