@@ -2,7 +2,7 @@
 
 # 強型闖入DenoLand[0]
 
-> 大家好，我不是Peter，我是Ian。
+> 大家好，我不是 Peter ，我是 Ian 。
 
 ## 學習動機?
 
@@ -10,7 +10,7 @@
 
 直到有一天，我依舊滑著臉書，看到某個線上課程的廣告:
 
-> 現在學會Deno，你也可以成為前10%的頂尖開發者。
+> 現在學會 Deno ，你也可以成為前10%的頂尖開發者。
 
 看到這個廣告，不經嘴角上揚，莫名戳中我的笑點XDD
 
@@ -18,19 +18,19 @@
 
 說了這麼多廢話，這些也不是誘使我學習Deno的契機，真正的原因有兩點:
 
-- TypeScript逐漸成熟，主流開發框架都開始支援TS，Deno更是直接支援Ts進行開發。
+- TypeScript 逐漸成熟，主流開發框架都開始支援 TS ， Deno 更是直接支援 Ts 進行開發。
 
-  > 雖然這件事好像已經持續一陣子了，不過去年在寫Vue.js時，我實在沒有辦法擠出時間連同TypeScript一起吸收，
+  > 雖然這件事好像已經持續一陣子了，不過去年在寫 Vue.js 時，我實在沒有辦法擠出時間連同 TypeScript 一起吸收，
   >
   > 因此留到今年做這件事。
 
-- Deno比起Node.js修正了很多缺點，這也是促使我開始學習Deno的原因之一。
+- Deno 比起 Node.js 修正了很多缺點，這也是促使我開始學習 Deno 的原因之一。
 
   > 這些地方會在其他章節繼續詳談。
   >
-  > 雖然Deno比起Node.js修正了很多缺點，我還是不認為Deno會在短期內把Node.js取代掉，畢竟Node.js以及npm已經影響了前後端的開發生態，我不認為Node.js會這麼快迎來衰亡。
+  > 雖然 Deno 比起 Node.js 修正了很多缺點，我還是不認為 Deno 會在短期內把 Node.js 取代掉，畢竟 Node.js 以及 npm 已經影響了前後端的開發生態，我不認為 Node.js 會這麼快迎來衰亡。
 
-以上就是我為何學習Deno，至於參加鐵人賽的原因就更簡單了:
+以上就是我為何學習 Deno ，至於參加鐵人賽的原因就更簡單了:
 
 - 我終於說服實驗室的朋友們跟我一起嗨: )
 - 如果沒有完賽很丟臉Q_Q
@@ -44,31 +44,31 @@
 
 - 完賽
 
-- 比較Deno跟Node.js，了解他們之間的差異。
+- 比較 Deno 跟 Node.js ，了解他們之間的差異。
 
-- 基礎的TypeScript語法。
+- 基礎的 TypeScript 語法。
 
-  畢竟標題都叫做`強型闖入DenoLand`了，沒有把基礎的TypeScript說一遍，實在說不過去。
+  畢竟標題都叫做 `強型闖入DenoLand` 了，沒有把基礎的 TypeScript 說一遍，實在說不過去。
 
-  > 在基礎的TypeScript篇章中，每天都會補充一些關於JavaScript的小知識，畢竟Ts本身就是Js的超集，大部分的觀念也都是互通的。
+  > 在基礎的 TypeScript 篇章中，每天都會補充一些關於 JavaScript 的小知識，畢竟 Ts 本身就是 Js 的超集，大部分的觀念也都是互通的。
 
-- 搭建開發環境以及`Hello, World!`
+- 搭建開發環境以及 `Hello, World!` 。
 
-  > 學習任何新的程式語言之前，Hello, World!都是必須的。
+  > 學習任何新的程式語言之前， Hello, World! 都是必須的。
 
-- Deno Cli、DenoLand介紹。
+- Deno Cli、DenoLand 介紹。
 
-- 規劃並實作RestFul API。
+- 規劃並實作 RestFul API。
 
-  > 這邊會教大家利用DenoLand所提供的套件，做一個簡單的CRUD API，並且串接MongoDB將資料寫在裏頭，若你是已經學會使用AJAX等技術的內行玩家，相信你一定可以自己串接API做出一些更好玩的應用。
+  > 這邊會教大家利用 DenoLand 所提供的套件，做一個簡單的 CRUD API ，並且串接 MongoDB 將資料寫在裏頭，若你是已經學會使用 AJAX 等技術的內行玩家，相信你一定可以自己串接 API 做出一些更好玩的應用。
 
-- Multi-Programming初入門。
+- Multi-Programming 初入門。
 
-  > 身為北科大計算機的一員，碰到了原生支持Multi-Programming的Deno，勢必需要好好介紹一番。
+  > 身為北科大計算機的一員，碰到了原生支持 Multi-Programming 的 Deno ，勢必需要好好介紹一番。
 
 這就是目前所規劃的所有事項，如果有任何問題想要討論/勘誤，歡迎直接寄站內信或是Email聯繫我。
 
-> 我的Email: ychen.desl@gmail.com
+> 我的 Email: ychen.desl@gmail.com
 
 ## 文章風格
 

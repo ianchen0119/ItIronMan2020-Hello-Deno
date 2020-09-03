@@ -165,7 +165,8 @@ JS 是一門奇怪的語言，你如果不知道原型鏈是什麼也能寫出�
 
 - [[筆記][JS]為何使用原型](https://medium.com/@iancodinghtml/筆記-js-為何使用原型-3f6330fc1311)
 
-> 趁機偷推一下筆者的垃圾筆記，~~真d無恥~~。
+  > 趁機偷推一下筆者的垃圾筆記，~~真d無恥~~。
 
 - 重新認識 JavaScript
+
   - [物件與原型鏈](https://ithelp.ithome.com.tw/articles/10194154)
