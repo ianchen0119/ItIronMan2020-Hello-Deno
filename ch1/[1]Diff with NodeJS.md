@@ -8,35 +8,35 @@
 
 ## 進入正題
 
-> 第一次聽到Deno是因為某一天我在YouTube上看到JSConf的議程紀錄 -- [10 Things I Regret About Node.js](https://www.youtube.com/watch?v=M3BM9TB-8yA&vl=en)
+> 第一次聽到 Deno 是因為某一天我在 YouTube 上看到 JSConf 的議程紀錄 -- [10 Things I Regret About Node.js](https://www.youtube.com/watch?v=M3BM9TB-8yA&vl=en)
 
-當中提到了很多Node.Js的缺陷，其中像是：
+當中提到了很多 Node.Js 的缺陷，其中像是：
 
-- 沒有在API中支持JavaScript的`Promise`。
+- 沒有在 API 中支持 JavaScript 的 `Promise` 。
 
-  在2009/6時，Node.Js是支援`Promise`的，不過開發團隊在2020/2將它移除了。
+  在2009/6時， Node.Js 是支援 `Promise` 的，不過開發團隊在2020/2將它移除了。
 
   > 你以為這樣就結束了嗎？
 
-  錯！大錯特錯！開發團隊後來還是將`Promise`加回來了。
+  錯！大錯特錯！開發團隊後來還是將 `Promise` 加回來了。
 
-  但也因為這樣，許多Node.Js的原生API都是使用CallBack Function而不是`Promise`去進行實作。
+  但也因為這樣，許多 Node.Js 的原生 API 都是使用 CallBack Function 而不是 `Promise` 去進行實作。
 
-  > 毫無疑問的，Deno原生支持Promise。
+  > 毫無疑問的， Deno 原生支持 Promise 。
 
 - 安全問題
 
-  V8引擎本身是很安全的SandBox，不過Node.Js在應用層面上並沒有承襲這樣良好的傳統。
+  V8 引擎本身是很安全的 SandBox ，不過 Node.Js 在應用層面上並沒有承襲這樣良好的傳統。
 
-  使用 V8引擎 實作的 Node.js 卻能夠在沒有`授權`的情況下，直接訪問網路、檔案系統，甚至是取得記憶體的相關資訊。
+  使用 V8 引擎 實作的 Node.js 卻能夠在沒有`授權`的情況下，直接訪問網路、檔案系統，甚至是取得記憶體的相關資訊。
 
-  > 筆者認為這邊是十分重要的關鍵，這個缺陷也影響到了我們之後使用Deno的方式。
+  > 筆者認為這邊是十分重要的關鍵，這個缺陷也影響到了我們之後使用 Deno 的方式。
 
 - 建構系統
 
-  使用GYP作為建構項目的系統而不是使用GN (Generate Ninja)。
+  使用 GYP 作為建構項目的系統而不是使用 GN (Generate Ninja)。
 
-  這個部分作者認為是Node.Js的最大疏失，我們先看看在WiKi上是如何介紹`Ninja`的：
+  這個部分作者認為是 Node.Js 的最大疏失，我們先看看在 WiK i上是如何介紹 `Ninja` 的：
 
   > Evan Martin從2007年到2012年在Chrome團隊工作。在加入初期，Chrome只能夠在Windows上執行，他的主要任務是把代碼移植到其它平台，而面臨的第一個任務就是確定構建系統。
   >
@@ -52,20 +52,20 @@
   >
   > -- [WiKi](https://zh.wikipedia.org/wiki/Ninja_(构建系统))
 
-  使用C++所編寫Ninja比起由Python編寫的GYP效能差了將近20倍，你可能會有疑問說：對啊！那為什麼Node.Js在初步建構時是採用GYP呢？
+  使用 C++ 所編寫 Ninja 比起由 Python 編寫的 GYP 效能差了將近20倍，你可能會有疑問說：對啊！那為什麼 Node.Js 在初步建構時是採用 GYP 呢？
 
-  由於Chrome V8最初也是由GYP所建構，不過我們可以從WiKi所引用的資料得知，Chrome V8後來改採Ninja建構系統，只可惜當時Node.Js的生態鏈已經形成並且很難做修正了，因此我們才會看到現在這樣的結果。
+  由於 Chrome V8 最初也是由 GYP 所建構，不過我們可以從 WiKi 所引用的資料得知， Chrome V8 後來改採 Ninja 建構系統，只可惜當時 Node.Js 的生態鏈已經形成並且很難做修正了，因此我們才會看到現在這樣的結果。
 
-- NPM、Package.Json、node_modules的設計缺陷
+- NPM, Package.Json, node_modules 的設計缺陷
 
-  - NPM過度極權，只要NPM在安全性上產生漏洞，全球用戶也跟著遭殃。
-  - Package.Json成為Node.Js專案的必需品，裡面常常放了很多多餘的資訊。
-  - 因為採用CommonJS標準，在引入其他Module時我們會自動忽略副檔名，導致系統需要浪費效能來做判斷。
-  - node_modules沒有標準的規範，導致不同套件都有不同的結構。
+  - NPM 過度極權，只要 NPM 在安全性上產生漏洞，全球用戶也跟著遭殃。
+  - Package.Json 成為 Node.Js 專案的必需品，裡面常常放了很多多餘的資訊。
+  - 因為採用 CommonJS 標準，在引入其他 Module 時我們會自動忽略副檔名，導致系統需要浪費效能來做判斷。
+  - node_modules 沒有標準的規範，導致不同套件都有不同的結構。
 
-  > 因為這些小小的瑕疵，也造就了Deno與Node.Js最大的不同：
+  > 因為這些小小的瑕疵，也造就了 Deno 與 Node.Js 最大的不同：
   >
-  > Deno沒有額外的套件管理系統，並且預設的模組系統是採用`ES Module`而不是[CommonJS](https://zh.wikipedia.org/wiki/CommonJS)。
+  > Deno 沒有額外的套件管理系統，並且預設的模組系統是採用 `ES Module` 而不是 [CommonJS](https://zh.wikipedia.org/wiki/CommonJS)。
 
 看完這個議程紀錄片以後，不知為何我想到大家常常說的一句話：
 
@@ -73,28 +73,28 @@
 
 > 分手是不需要理由的。
 
-不過Deno的出生並不是沒有理由的，Node.Js的確有著許多設計上的小瑕疵。
+不過 Deno 的出生並不是沒有理由的， Node.Js 的確有著許多設計上的小瑕疵。
 
-Node.Js的生態圈中也很努力的想要把這些問題給解決掉~~（遠望PHP）~~。
+Node.Js 的生態圈中也很努力的想要把這些問題給解決掉~~（遠望 PHP ）~~。
 
 ## 總結
 
 本章的最後，筆者來幫大家做個總整理：
 
-- Deno所使用的模組系統為`ES Module`。
+- Deno 所使用的模組系統為 `ES Module` 。
 
-  > 在這邊幫Node.Js澄清一下：
+  > 在這邊幫 Node.Js 澄清一下：
   >
-  > Node.Js並不是完全遵守CommonJS的規範，它是參考了CommonJS的規範，請知悉。
+  > Node.Js 並不是完全遵守 CommonJS 的規範，它是參考了 CommonJS 的規範，請知悉。
   >
-  > Node.Js也逐漸加強了對於ES Module的支援，請參考[Node.js v14.5.0 Documentation](https://nodejs.org/api/esm.html#esm_dual_commonjs_es_module_packages)。
+  > Node.Js 也逐漸加強了對於 ES Module 的支援，請參考 [Node.js v14.5.0 Documentation](https://nodejs.org/api/esm.html#esm_dual_commonjs_es_module_packages)。
 
-- 我們在Deno上執行`JS`or`TS`程式碼時，若有需要用到網路、檔案讀取，都需要在CLI中下額外指令以確保安全性。
+- 我們在 Deno 上執行 `JS` or `TS` 程式碼時，若有需要用到網路、檔案讀取，都需要在 CLI 中下額外指令以確保安全性。
 
-- Deno並沒有額外的套件管理系統，若需要導入其他模組，只需要將該模組的Url引入就好。
+- Deno 並沒有額外的套件管理系統，若需要導入其他模組，只需要將該模組的 Url 引入就好。
 
-- 原生支持`Promise`並且能夠直接使用TypeScript進行撰寫，無需額外編譯。
+- 原生支持 `Promise` 並且能夠直接使用 TypeScript 進行撰寫，無需額外編譯。
 
 > 對於初學者而言，上面琳瑯滿目的專業名詞可能會讓你感到緊張。
 >
-> 不過這些名詞在之後的TypeScript基礎篇中筆者都會額外進行補充，大家不用擔心。
+> 不過這些名詞在之後的 TypeScript 基礎篇中筆者都會額外進行補充，大家不用擔心。
