@@ -32,10 +32,10 @@
     - Intro for Web API
     - MongoDB
     - Connect to MongoDB
-    - Planning on RestAPI
-    - Impl of RestAPI
+    - Planning on WebAPI
+    - Impl of WebAPI
 - Multi-Programming
     - Concept of multi-program
     - Use Worker to build your multi-programming APP 
-    > `Worker` haven't support allocate task to local code, I will find any solutions that can solved this problem.
-[Worker](https://www.axihe.com/edu/deno/workers.html)
+    
+
