@@ -127,8 +127,6 @@ y = "456";
   yesOrNo(black); //no
   ```
 
-  
-
 - null
 
   > 萬物皆空。
