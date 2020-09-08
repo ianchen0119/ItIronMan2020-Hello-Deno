@@ -7,3 +7,4 @@ self.onmessage = async (e) => {
 		}
 	self.close();
   };
+ 

@@ -114,49 +114,59 @@
   };
   ```
 
-## 在函式中應用強行別
+## 補充: 立即函式 (IIFE)
 
-在 TypeScript 問世前，開發者需要耗費額外的心力去避免下面的情況發生:
+> 懶人包: 定義完就執行的函式。
+
+一般情況下，函式被定義後還需要被呼叫才會執行。不過，在 JavaScript 中有個特別的存在可以允許函式被定義後就立即執行。
+
+下面範例為一般的函式，定義後需要呼叫才會將結果回傳。
 
 ```typescript
 function sum(para1, para2){
     return para1 + para2;
 }
-let result = sum('Ian',3);
+let result = sum(1,2); //3
 ```
 
-雖然這樣的錯誤並不會讓程式崩潰，但我們會得到超乎開發者預期的結果。
-
-若我們今天是開發一項線上的大專案，是不會允許這種低級錯誤發生的。
-
-然而， TypeScript 的出現，幫助我們解決這個看似簡單，但又惱人的問題。
+而 IIFE 比較特別，並不需要呼叫:
 
 ```typescript
-function sum(para1: number, para2: number){
+let result = function sum(para1, para2){
     return para1 + para2;
-}
+}(1,2)
 ```
 
-事實上，在我們在 Deno 上撰寫 TypeScript 時，編譯器也會要求我們對函式的做型別註記。
+如果今天筆者不打算使用變數存放函式的結果，而是希望利用 IIFE 去做程式碼的初始化設定，可以這麼做:
 
 ```typescript
-function sum(para1, para2) {
-  return para1 + para2;
-}
+(funtion init(){
+   console.log("Init!") 
+})()
 ```
 
-若以上面的程式碼下去編譯，編譯器便會跳出錯誤訊息:
+或是利用 `void` 達到同樣的目的:
 
-```
-TS7006 [ERROR]: Parameter 'para1' implicitly has an 'any' type.
-function sum(para1, para2) 
-// ...
+```typescript
+void funtion init(){
+   console.log("Init!") 
+}()
 ```
 
+- 知識點: void
+
+  > 請參考延伸閱讀。
+
+記住，當函式被宣告為立即函式後，便無法利用一般的方式呼叫它:
+
+```typescript
+init()
 ```
-[ERROR]: Parameter 'para2' implicitly has an 'any' type.
-function sum(para1, para2)
-// ...
+
+錯誤代碼:
+
+```typescript
+Uncaught ReferenceError: init is not defined
 ```
 
 ## 延伸閱讀
@@ -166,6 +176,8 @@ function sum(para1, para2)
 > 在讀完本篇以後，筆者也強烈建議大家去看看以下文章，或許會對型別、變數宣告...等觀念有更深層的看法唷！
 
 - [Wiki-ECMAScript](https://zh.wikipedia.org/wiki/ECMAScript)
+
+- [void](https://kuro.tw/posts/2019/08/04/JS-%E5%86%B7%E7%9F%A5%E8%AD%98-%E4%BD%A0%E6%89%80%E4%B8%8D%E7%9F%A5%E9%81%93%E7%9A%84-void/)
 
 - [ES6 的縮寫概念](https://wcc723.github.io/javascript/2017/12/23/javascript-short-hand/)
 
