@@ -1,6 +1,6 @@
 ![Node.js之父新專案Deno 1.0正式亮相| iThome](https://s4.itho.me/sites/default/files/styles/picture_size_large/public/field/image/v1_wide.jpg?itok=aqrO_0jM)
 
-# 強型闖入DenoLand[20] - Testing and Related Tools (1)
+# 強型闖入DenoLand[20] - Testing and Related Tools(1)
 
 本篇章會分成三部分來介紹 Deno 原生的好用工具和功能:
 
