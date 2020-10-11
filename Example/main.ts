@@ -1,0 +1,2 @@
+new Worker("https://gist.githubusercontent.com/ianchen0119/5935736ab973fcbcbbbb5294d8bd2655/raw/a94a6547d8b66f50441f4cef8a5218ab19b49c11/worker.ts", { type: "module" });
+new Worker("https://gist.githubusercontent.com/ianchen0119/5935736ab973fcbcbbbb5294d8bd2655/raw/531202674ddcc1a5134b0d75baf6f72f8e4f55ea/worker.ts", { type: "module" });
