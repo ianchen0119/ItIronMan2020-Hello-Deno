@@ -6,7 +6,7 @@ function b(i: number,j: number) :number{
 	}
 function MatrixC(i :number,j :number){
 	let result = 0;
-	for (var x = 1;x <= 60; x++) {
+	for (var x = 1; x <= 60; x++) {
 		let c = a(i,x)*b(x,j)
 		result = result + c;
 	}
