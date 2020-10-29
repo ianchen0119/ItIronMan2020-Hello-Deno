@@ -1,6 +1,11 @@
-# Deno with TypeScript 
+# Deno technical document
+
+## GitBook
+
+[Link](https://github.com/ianchen0119)
 
 ## Reference
+
 [入門教程](https://ts.xcatliu.com/basics/union-types.html)
 
 [10 Things I Regret About Node.js - Ryan Dahl - JSConf EU](https://www.youtube.com/watch?v=M3BM9TB-8yA&vl=en)
@@ -16,6 +21,7 @@
 [Deno: Create a rest api using JWT](https://levelup.gitconnected.com/deno-create-a-rest-api-using-jwt-5141fd5b1066)
 
 ## Menu
+
 - Preface
 - What's the difference between Deno and Node.js
 - Build your development environment for deno
@@ -28,14 +34,14 @@
     - Union Types
     - Interface
     - OOP
-- CRUD
+- Multi-Programming
+    - Concept of multi-program
+    - Use Worker to build your multi-threading APP 
+- Web API
     - Intro for Web API
     - MongoDB
     - Connect to MongoDB
     - Planning on WebAPI
     - Impl of WebAPI
-- Multi-Programming
-    - Concept of multi-program
-    - Use Worker to build your multi-programming APP 
-    
+    - Concept of CORS and how to solve it.
 
